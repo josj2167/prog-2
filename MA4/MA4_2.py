@@ -5,7 +5,7 @@ from person import Person
 def main():
 	f = Person(5)
 	print(f.get())
-	f.set(7)
+	f.set(8)
 	print(f.get())
 
 if __name__ == '__main__':
