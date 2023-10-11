@@ -2,15 +2,15 @@
 #include <iostream>
 // Person class 
 
-class Person{
-	public:
-		Person(int);
-		int get();
-		void set(int);
-		int fib(int n);
-	private:
-		int age;
-	};
+class Person {
+public:
+	Person(int);
+	int get();
+	void set(int);
+	int fib(int n);
+private:
+	int age;
+};
  
 Person::Person(int n){
 	age = n;
