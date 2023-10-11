@@ -37,8 +37,9 @@ if __name__ == '__main__':
     print(f"Result (fib_numba): {result}")
     print(f"Execution Time (fib_numba): {end_time - start_time} seconds")
     
+    person = Person(30)
     start_time = time.perf_counter()
-    result = Person.fib(Person, 30)
+    result = Person.fib(person)
     end_time = time.perf_counter()
     print(f"Result (fib_rec): {result}")
     print(f"Execution Time (fib_rec): {end_time - start_time} seconds")
