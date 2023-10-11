@@ -5,7 +5,6 @@ from numba import njit
 
 import time
 import matplotlib.pyplot as plt
-from person import Person
 
 
 @njit
