@@ -17,6 +17,6 @@ class Person(object):
 
 	def set(self, age):
 		lib.Person_set(self.obj, age)
-    
+        
 	def __del__(self):
 		return lib.Person_delete(self.obj)
