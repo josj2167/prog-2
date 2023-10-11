@@ -26,7 +26,7 @@ def fib_py(n):
 def main():
 	f = Person(5)
 	print(f.get())
-	f.set(8)
+	f.set(9)
 	print(f.get())
 
 if __name__ == '__main__':
