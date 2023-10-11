@@ -4,7 +4,7 @@ class Person {
 public:
     Person(int age) : age(age) {}
 
-    int Person_fibonacci() {
+    int fibonacci() {
         if (age <= 0) return 0;
         if (age == 1) return 1;
         int a = 0, b = 1;
