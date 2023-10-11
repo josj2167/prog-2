@@ -6,12 +6,10 @@ from numba import njit
 import matplotlib as plt
 
 def fib_py(n):
-    if n <= 0:
-        return 0
-    elif n == 1:
-        return 1
+    if n <= 1:
+        return n
     else:
-        return fib_py(n - 1) + fib_py(n - 2)
+        return(fib_py(n - 1) + fib_py(n - 2))
     
 @njit
 def fib_numba(n):
