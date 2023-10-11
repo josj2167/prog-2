@@ -34,6 +34,7 @@ if __name__ == '__main__':
 		result = fib_py(n)
 		end_time = time.perf_counter()
 		fib_py_times.append(end_time - start_time)
+		print(n, fib_py_times)
 
 		start_time = time.perf_counter()
 		result = fib_numba(n)
