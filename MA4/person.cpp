@@ -27,7 +27,7 @@ void Person::set(int n){
 	}
 
 int Person::fib() {
-	return this -> fib_rec(this->age)
+	return this -> fib_rec(this->age);
 }
 
 int Person::fib_rec(int n) {
