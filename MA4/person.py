@@ -18,5 +18,10 @@ class Person(object):
 	def set(self, age):
 		lib.Person_set(self.obj, age)
 
+	def fibonacci(self):  # Add the Fibonacci method
+		lib.Person_fibonacci.argtypes = [ctypes.c_void_p]
+		lib.Person_fibonacci.restype = ctypes.c_int
+		return lib.Person_fibonacci(self.obj)
+
 	def __del__(self):
 		return lib.Person_delete(self.obj)
