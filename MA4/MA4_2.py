@@ -46,7 +46,7 @@ def main():
         # Call the C++ code here and measure its execution time
         f = Person(n)
         start_time = time.perf_counter()
-        f.fib()
+        f.fibonacci()
         end_time = time.perf_counter()
         cpp_times_1.append(end_time - start_time)
 
@@ -84,7 +84,7 @@ def main():
     # For the C++ code, you need to call it and measure its time for n = 47
     f = Person(47)
     start_time = time.perf_counter()
-    f.fib()
+    f.fibonacci()
     end_time = time.perf_counter()
     cpp_time_47 = end_time - start_time
     print(f"Fibonacci(47) using C++ took {cpp_time_47} seconds")
