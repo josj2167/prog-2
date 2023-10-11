@@ -7,9 +7,11 @@ public:
 	Person(int);
 	int get();
 	void set(int);
-	int fib(int n);
+	int fib();
 private:
 	int age;
+	int fib_rec(int n);
+	
 };
  
 Person::Person(int n){
@@ -24,8 +26,11 @@ void Person::set(int n){
 	age = n;
 	}
 
+int Person::fib() {
+	return this -> fib_rec(this->age)
+}
 
-int Person::fib(int n) {
+int Person::fib_rec(int n) {
     if (n <= 0) {
         return 0;
     } else if (n == 1) {
@@ -50,4 +55,9 @@ extern "C"{
 			person = nullptr;
 			}
 		}
+	int Person_fib(Person* person)
+	{
+		return person -> fib();
+
+	}
 	}
