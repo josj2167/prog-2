@@ -2,6 +2,7 @@
 
 from person import Person
 from numba import njit
+<<<<<<< HEAD
 import time
 import matplotlib.pyplot as plt
 
