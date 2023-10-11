@@ -4,7 +4,7 @@ class Person {
 public:
     Person(int age) : age(age) {}
 
-    int fibonacci() {
+    int Person_fibonacci() {
         if (age <= 0) return 0;
         if (age == 1) return 1;
         int a = 0, b = 1;
@@ -29,7 +29,7 @@ extern "C" {
         delete person;
     }
 
-    int fibonacci(Person* person) {
+    int Person_fibonacci(Person* person) {
         return person->fib();
     }
 }
