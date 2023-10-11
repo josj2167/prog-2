@@ -63,12 +63,13 @@ if __name__ == '__main__':
 		
 	for m in m_values:
 		start_time_m = time.perf_counter()
-		result_m = fib_py(n)
+		result_m = fib_py(m)
 		end_time_m = time.perf_counter()
 		fib_py_times_m.append(end_time_m - start_time_m)
+		print(m, fib_py_times_m[-1])
           
 		start_time_m = time.perf_counter()
-		result_m = fib_numba(n)
+		result_m = fib_numba(m)
 		end_time_m = time.perf_counter()
 		fib_numba_times_m.append(end_time_m - start_time_m)
 		
