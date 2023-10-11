@@ -54,6 +54,4 @@ if __name__ == '__main__':
 	plt.ylabel('Execution Time (seconds)')
 	plt.title('Fibonacci Execution Times')
 	plt.legend()
-
-	# Save the plot as a PNG image
 	plt.savefig('fibonacci_execution_times.png')
