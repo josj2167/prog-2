@@ -47,7 +47,8 @@ def main():
         f = Person(n)
         start_time = time.perf_counter()
         f.fibonacci()
-        cpp_times_1.append(time.perf_counter() - start_time)
+        end_time = time.perf_counter()
+        cpp_times_1.append(end_time - start_time)
 
     n_values_2 = list(range(20, 31))
     py_times_2 = []
@@ -84,7 +85,8 @@ def main():
     f = Person(47)
     start_time = time.perf_counter()
     f.fibonacci()
-    cpp_time_47 = time.perf_counter() - start_time
+    end_time = time.perf_counter()
+    cpp_time_47 = end_time - start_time
     print(f"Fibonacci(47) using C++ took {cpp_time_47} seconds")
 
 
