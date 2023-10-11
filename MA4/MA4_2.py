@@ -2,23 +2,8 @@
 
 from person import Person
 from numba import njit
-<<<<<<< HEAD
 import time
 import matplotlib.pyplot as plt
-
-n_values = list(range(30, 46))
-py_times = []
-numba_times = []
-cpp_times = []
-
-for n in n_values:
-    start_time = time.perf_counter()
-    fib_py(n)
-    py_times.append(time.perf_counter() - start_time)
-    
-    start_time = time.perf_counter()
-    fib_numba(n)
-    numba_times.append(time.perf_counter() - start_time)
 
 @njit
 def fib_numba(n):
@@ -39,6 +24,21 @@ def fib_py(n):
         return 1
     else:
         return fib_py(n - 1) + fib_py(n - 2)
+
+n_values = list(range(30, 46))
+py_times = []
+numba_times = []
+cpp_times = []
+
+for n in n_values:
+    start_time = time.perf_counter()
+    fib_py(n)
+    py_times.append(time.perf_counter() - start_time)
+
+    start_time = time.perf_counter()
+    fib_numba(n)
+    numba_times.append(time.perf_counter() - start_time)
+
 
 def main():
 	f = Person(5)
