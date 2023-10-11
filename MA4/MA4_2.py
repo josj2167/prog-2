@@ -3,6 +3,7 @@
 from person import Person
 import time
 from numba import njit
+import matplotlib as plt
 
 def fib_py(n):
     if n <= 0:
@@ -25,22 +26,36 @@ def fib_numba(n):
         return b
 
 if __name__ == '__main__':
-	for n in range(30,46):
+	n_values = list(range(30,46))
+	fib_py_times = []
+	fib_numba_times = []
+	fib_rec_times = []
+	
+	for n in n_values:
 		start_time = time.perf_counter()
 		result = fib_py(n)
 		end_time = time.perf_counter()
-		print(f"Result (fib_py): {result}")
-		print(f"Execution Time (fib_py): {end_time - start_time} seconds")
+		fib_py_times.append(end_time - start_time)
 
 		start_time = time.perf_counter()
 		result = fib_numba(n)
 		end_time = time.perf_counter()
-		print(f"Result (fib_numba): {result}")
-		print(f"Execution Time (fib_numba): {end_time - start_time} seconds")
+		fib_numba_times.append(end_time - start_time)
     
 		f = Person(n)
 		start_time = time.perf_counter()
 		result = Person.fib(f, n)
 		end_time = time.perf_counter()
-		print(f"Result (fib_rec): {result}")
-		print(f"Execution Time (fib_rec): {end_time - start_time} seconds")
+		fib_rec_times.append(end_time - start_time)
+    
+	plt.figure(figsize=(10, 6))
+	plt.plot(n_values, fib_py_times, label='fib_py')
+	plt.plot(n_values, fib_numba_times, label='fib_numba')
+	plt.plot(n_values, fib_rec_times, label='fib_rec')
+	plt.xlabel('N Value')
+	plt.ylabel('Execution Time (seconds)')
+	plt.title('Fibonacci Execution Times')
+	plt.legend()
+
+	# Save the plot as a PNG image
+	plt.savefig('fibonacci_execution_times.png')
