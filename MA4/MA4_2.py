@@ -39,7 +39,7 @@ if __name__ == '__main__':
     
     person = Person(30)
     start_time = time.perf_counter()
-    result = Person.fib(person)
+    result = Person.fib(person, 30)
     end_time = time.perf_counter()
     print(f"Result (fib_rec): {result}")
     print(f"Execution Time (fib_rec): {end_time - start_time} seconds")
