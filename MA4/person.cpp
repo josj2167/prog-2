@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <iostream>
 // Person class 
 
 class Person{
@@ -6,6 +7,7 @@ class Person{
 		Person(int);
 		int get();
 		void set(int);
+		int fib(int n);
 	private:
 		int age;
 	};
@@ -23,6 +25,21 @@ void Person::set(int n){
 	}
 
 
+int Person::fib(int n) {
+    if (n <= 0) {
+        return 0;
+    } else if (n == 1) {
+        return 1;
+    } else {
+        int a = 0, b = 1;
+        for (int i = 2; i <= n; i++) {
+            int temp = a;
+            a = b;
+            b = temp + b;
+        }
+        return b;
+    }
+}
 extern "C"{
 	Person* Person_new(int n) {return new Person(n);}
 	int Person_get(Person* person) {return person->get();}
