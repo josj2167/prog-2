@@ -30,6 +30,6 @@ extern "C" {
     }
 
     int Person_fibonacci(Person* person) {
-        return person->fib();
+        return person->fibonacci();
     }
 }
