@@ -3,7 +3,7 @@
 from person import Person
 import time
 from numba import njit
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 def fib_py(n):
     if n <= 1:
