@@ -40,12 +40,14 @@ if __name__ == '__main__':
 		result = fib_numba(n)
 		end_time = time.perf_counter()
 		fib_numba_times.append(end_time - start_time)
+		print(n, fib_numba_times[-1])
     
 		f = Person(n)
 		start_time = time.perf_counter()
 		result = Person.fib(f, n)
 		end_time = time.perf_counter()
 		fib_rec_times.append(end_time - start_time)
+		print(n, fib_rec_times[-1])
     
 	plt.figure(figsize=(10, 6))
 	plt.plot(n_values, fib_py_times, label='fib_py')
