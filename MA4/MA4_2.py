@@ -88,4 +88,5 @@ def main():
     print(f"Fibonacci(47) using C++ took {cpp_time_47} seconds")
 
 if __name__ == '__main__':
+if __name__ == '__main__':
     main()
