@@ -31,7 +31,7 @@ if __name__ == '__main__':
 	fib_numba_times = []
 	fib_numba_times_m = []
 	fib_rec_times = []
-	
+	"""
 	for n in n_values:
 		start_time = time.perf_counter()
 		result = fib_py(n)
@@ -82,10 +82,12 @@ if __name__ == '__main__':
 	plt.title('Fibonacci Execution Times For Py and Numba only')
 	plt.legend()
 	plt.savefig('fibonacci_execution_times_m.png')
-     
+     """
 
-	start_time_47 = time.perf_counter() 
+	#start_time_47 = time.perf_counter() 
 	f2 = Person(47)
 	fib_rec_47 = Person.fib(f2, 47)
-	end_time_47 = time.perf_counter()
-	print(f"Fibonacci sequence for 47 takes: {end_time_47 - start_time_47}")
+	#end_time_47 = time.perf_counter()
+	#print(f"Fibonacci sequence for 47 takes: {end_time_47 - start_time_47}")
+	print(fib_rec_47)
+	print(fib_numba(47))
