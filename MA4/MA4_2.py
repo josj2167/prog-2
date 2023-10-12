@@ -89,4 +89,5 @@ if __name__ == '__main__':
 	fib_rec_47 = Person.fib(f2, 47)
 	end_time_47 = time.perf_counter()
 	print(f"Fibonacci sequence for 47 takes: {end_time_47 - start_time_47}")
-	"""the answer for fibonacci(47) using c++ is -1323752223 and for numba is 2971215073"""
+	"""the answer for fibonacci(47) using c++ is -1323752223 and for numba is 2971215073. the number for c++ is negative becuase c++ cant handle integers outside the 32
+    bit range, which is 2,147,483,647 to -2,147,483,648. fibonacci(47) is 2,971,215,073 which is outside the range."""
